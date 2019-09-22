@@ -35,10 +35,10 @@ public class Clan {
 	     Personage aux2 = firstPersonage;
 	     Personage aux1 = firstPersonage.getNext();
          while(aux1!=null){
+        	 
              aux1 = aux1.getNext();
              aux2 = aux2.getNext();
          }
-         aux2.getNext() = temp;
 
 				}
 			}
