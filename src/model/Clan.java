@@ -29,44 +29,24 @@ public class Clan {
 	public int compareByName(Clan p) {
 		return name.compareTo(p.getName());
 	}
-	//By bubble
+
+	// By bubble
 	public void sortPersonageByScore() {
 
-	     Personage aux2 = firstPersonage;
-	     Personage aux1 = firstPersonage.getNext();
-         while(aux1!=null){
-        	 
-             aux1 = aux1.getNext();
-             aux2 = aux2.getNext();
-         }
+		if (firstPersonage!=null) {
+		Personage aux1 = firstPersonage;
+		Personage aux2 = firstPersonage.getNext();
+		while (aux1 != null) {
 
-				}
-			}
+			aux1 = aux1.getNext();
+			aux2 = aux2.getNext();
 		}
-
+		}
 	}
-	
-	//Clase Lista:
 
-	// class Lista {
-		   
-	//	    Nodo tope;
+	@Override
+	public String toString() {
+		return "Clan [name=" + name + ", firstPersonage=" + firstPersonage + "]";
+	}
 
-	//	    public Lista() {
-	//	        tope = null;
-	//	    }      
-		   
-		    boolean Vacia(){
-		        return tope==null;
-		    }
-		   
-		    void Ingresar(Nodo temp){
-		        if(Vacia()){
-		            tope = temp;
-		        }else{
-		       
-		        }
-		    }
-		}
-	
 }

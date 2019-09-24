@@ -24,6 +24,7 @@ public class Technique implements Comparable<Technique> {
 		return factor;
 	}
 
+
 	public void setFactor(double factor) {
 		this.factor = factor;
 	}
@@ -34,6 +35,11 @@ public class Technique implements Comparable<Technique> {
 
 	public void setNext(Technique next) {
 		this.next = next;
+	}
+
+	@Override
+	public String toString() {
+		return "Technique [name=" + name + ", factor=" + factor + ", next=" + next + "]";
 	}
 
 	@Override

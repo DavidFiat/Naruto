@@ -19,6 +19,11 @@ public class VideoGame {
 		this.clans = clans;
 	}
 
+	@Override
+	public String toString() {
+		return "VideoGame [clans=" + clans + "]";
+	}
+
 	// By Insertion
 	public void sortClanByName() {
 		for (int i = 1; i < clans.size(); i++) {

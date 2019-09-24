@@ -74,6 +74,8 @@ public class Personage implements Comparator<Personage>{
 		return next;
 	}
 
+	
+
 	public void setNext(Personage next) {
 		this.next = next;
 	}
@@ -85,7 +87,12 @@ public class Personage implements Comparator<Personage>{
 	public void setPrevious(Personage previous) {
 		this.previous = previous;
 	}
-
+	@Override
+	public String toString() {
+		return "Personage [score=" + score + ", name=" + name + ", personality=" + personality + ", date=" + date
+				+ ", power=" + power + ", firstTechnique=" + firstTechnique + ", next=" + next + ", previous="
+				+ previous + "]";
+	}
 	@Override
 	public int compare(Personage a, Personage b) {
 		return (int) ((a.getScore())-(b.getScore()));
