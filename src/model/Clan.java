@@ -33,14 +33,33 @@ public class Clan {
 	// By bubble
 	public void sortPersonageByScore() {
 
-		if (firstPersonage!=null) {
-		Personage aux1 = firstPersonage;
-		Personage aux2 = firstPersonage.getNext();
-		while (aux1 != null) {
+		if (firstPersonage != null) {
+			Personage ne = firstPersonage;
+			Personage nex = firstPersonage.getNext();
+			while (nex != null) {
 
-			aux1 = aux1.getNext();
-			aux2 = aux2.getNext();
-		}
+				if (ne.compare(ne, nex) > 0) {
+
+					Personage temp = new Personage(ne.getName(), ne.getPersonality(), ne.getDate(), ne.getPower());
+					ne.setName(nex.getName());
+					ne.setPersonality(nex.getPersonality());
+					ne.setDate(nex.getDate());
+					ne.setPower(nex.getPower());
+					nex.setName(temp.getName());
+					nex.setPersonality(temp.getPersonality());
+					nex.setDate(temp.getDate());
+					nex.setPower(temp.getPower());
+
+				} else {
+					if (nex.getNext() != null) {
+						ne = ne.getNext();
+						nex = nex.getNext();
+					}else {
+						nex=null;
+					}
+				}
+
+			}
 		}
 	}
 

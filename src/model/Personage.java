@@ -15,7 +15,7 @@ public class Personage implements Comparator<Personage>{
 
 
 	public Personage(String name, String personality, Date date, double power) {
-		//Metodo score; 
+		//Metodo score;
 		this.name = name;
 		this.personality = personality;
 		this.date = date;
@@ -87,6 +87,16 @@ public class Personage implements Comparator<Personage>{
 	public void setPrevious(Personage previous) {
 		this.previous = previous;
 	}
+	
+	// By Selection
+	public void sortTechniquesByName() {
+		
+		}
+	
+	
+	
+	
+	
 	@Override
 	public String toString() {
 		return "Personage [score=" + score + ", name=" + name + ", personality=" + personality + ", date=" + date
