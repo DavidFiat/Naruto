@@ -36,7 +36,8 @@ public class Clan {
 		if (firstPersonage != null) {
 			Personage ne = firstPersonage;
 			Personage nex = firstPersonage.getNext();
-			while (nex != null) {
+			boolean now = false;
+			while (nex != null && !now) {
 
 				if (ne.compare(ne, nex) > 0) {
 
@@ -54,14 +55,15 @@ public class Clan {
 					if (nex.getNext() != null) {
 						ne = ne.getNext();
 						nex = nex.getNext();
-					}else {
-						nex=null;
+					} else {
+						now = true;
 					}
 				}
 
 			}
 		}
 	}
+	
 
 	@Override
 	public String toString() {
